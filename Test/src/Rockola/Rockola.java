@@ -62,8 +62,8 @@ public class Rockola {
 		while(displayArtists) {	
 			this.selectedArtist = -1;
 			for(int i = 0; i < this.artist.size(); i++ ) {
-				Artist artist = this.artist.get(i);
-				System.out.println( (i+1) + " - " + artist.getName());
+				Artist artistTemp = this.artist.get(i);
+				System.out.println( (i+1) + " - " + artistTemp.getName());
 			}
 			
 			System.out.println("0 - Salir");
