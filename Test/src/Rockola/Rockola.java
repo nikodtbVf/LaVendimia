@@ -9,16 +9,13 @@ public class Rockola {
 	private int selectedArtist;
 	private boolean isPlayingMusic;
 	private ArrayList<Artist> artist;
-	private ArrayList<Song> queueSongs;
 	Scanner scan;
 	
 	public Rockola() {
 		this.selectedSong = -1;
 		this.selectedAlbum = -1;
 		this.selectedArtist = -1;
-		this.queueSongs = new ArrayList<Song>();
 		this.artist = new ArrayList<Artist>();
-		this.queueSongs = new ArrayList<Song>();
 		scan =  new Scanner(System.in);
 	}
 	
@@ -33,7 +30,6 @@ public class Rockola {
 		while(playingMusic) {
 			System.out.println("Seleccione una opción");
 			System.out.println("1 : Mostrar Artistas");
-			System.out.println("2: Mostrar Albums");
 			System.out.println("0: Salir");
 			
 			int option = scan.nextInt();
@@ -41,9 +37,6 @@ public class Rockola {
 			switch(option) {
 				case 1:
 					displayArtists();
-					break;
-				case 2:
-					displayQueue();
 					break;
 				case 0:
 					playingMusic = false;
@@ -128,10 +121,6 @@ public class Rockola {
 				System.out.println("Escuchando ahora " + songs.get(option-1).getName());		
 			}
 		}
-	}
-	
-	public void displayQueue() {
-		
 	}
 }
 
